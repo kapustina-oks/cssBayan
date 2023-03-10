@@ -12,7 +12,14 @@ body {
 
 .accordion-items {
     list-style: none;
-    
+    padding: 0;
+    margin: 0;
+}
+
+.accordion-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .accordion-item {
@@ -20,22 +27,40 @@ body {
 }
 
 .accordion-item-title {
-
+    margin-right: 24px;
 }
 
 .accordion-item-bottom {
     height: 0;
+    min-height: 0;
     text-align: center;
+    opacity: 0;
+    transition: all 0.3s;
 }
 
 .accordion-item-image {
     width: 400px;
     height: auto;
-    visibility: hidden;
     pointer-events: none;
 }
 
 .accordion-item-button {
     border: 0;
     background-color: transparent;
+}
+
+input {
+    opacity: 0;
+    z-index: -1;
+}
+
+input:checked ~ .accordion-item-bottom {
+    min-height: 300px;
+    padding: 1em;
+    opacity: 1;   
+    transition: all 0.6s;
+}
+
+input:checked ~ .accordion-item-header .accordion-item-button {
+    transform: rotate(-45deg);
 }
