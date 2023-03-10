@@ -1,0 +1,41 @@
+body {
+    background-color: #F5F5EB;
+}
+
+.accordion-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 54px;
+    padding-bottom: 54px;
+}
+
+.accordion-items {
+    list-style: none;
+    
+}
+
+.accordion-item {
+    border-bottom: 1px solid grey;
+}
+
+.accordion-item-title {
+
+}
+
+.accordion-item-bottom {
+    height: 0;
+    text-align: center;
+}
+
+.accordion-item-image {
+    width: 400px;
+    height: auto;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.accordion-item-button {
+    border: 0;
+    background-color: transparent;
+}
