@@ -53,6 +53,10 @@ body {
     visibility: hidden;
 }
 
+.accordion-item-content {
+    cursor: pointer;
+}
+
 input {
     opacity: 0;
     z-index: -1;
@@ -60,7 +64,6 @@ input {
 
 input:checked ~ .accordion-item-content .accordion-item-bottom {
     min-height: 300px;
-    padding: 1em;  
     transition: all 0.3s;
 }
 
@@ -85,6 +88,25 @@ input:checked ~ .accordion-item-content .accordion-item-bottom .accordion-item-i
     color: blue;
 }
 
+.accordion-items:hover {
+    color: black;
+    transition: color 0.3s;
+}
+
 .accordion-items:hover > .accordion-item .accordion-item-content .accordion-item-header .accordion-item-button{
     visibility: visible
+}
+
+.accordion-item-header:hover ~ .accordion-item-bottom .accordion-item-image{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.accordion-item-header:hover ~ .accordion-item-bottom {
+    min-height: 300px;
+    transition: all 0.3s;
+}
+
+.accordion-item-header:hover > .accordion-item-button {
+    transform: rotate(-45deg);
 }
