@@ -58,24 +58,24 @@ input {
     z-index: -1;
 }
 
-input:checked ~ .accordion-item-bottom {
+input:checked ~ .accordion-item-content .accordion-item-bottom {
     min-height: 300px;
     padding: 1em;  
     transition: all 0.3s;
 }
 
-input:checked ~ .accordion-item-header .accordion-item-button {
+input:checked ~ .accordion-item-content .accordion-item-header .accordion-item-button {
     transform: rotate(-45deg);
     
 }
 
-input:checked ~ .accordion-item-header .accordion-item-title {
+input:checked ~ .accordion-item-content .accordion-item-header .accordion-item-title {
     transition: color 0.3s;
     color: black;
     
 }
 
-input:checked ~ .accordion-item-bottom .accordion-item-image{
+input:checked ~ .accordion-item-content .accordion-item-bottom .accordion-item-image{
     transform: scale(1);
     visibility: visible;
 }
@@ -85,6 +85,6 @@ input:checked ~ .accordion-item-bottom .accordion-item-image{
     color: blue;
 }
 
-.accordion-items:hover > .accordion-item .accordion-item-header .accordion-item-button{
+.accordion-items:hover > .accordion-item .accordion-item-content .accordion-item-header .accordion-item-button{
     visibility: visible
 }
